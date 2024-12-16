@@ -1,5 +1,6 @@
 # next-portfolio
 
-[]background renklendirmesi
-[]navbar yapımı
+[x]background renklendirmesi
+[x]navbar yapımı
+[x]navbar bounce animasyonu
 
