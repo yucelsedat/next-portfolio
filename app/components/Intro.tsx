@@ -45,7 +45,7 @@ export default function Intro() {
 
      
       
-      <motion.p className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl '
+      <motion.h1 className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl '
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
       >
@@ -54,7 +54,7 @@ export default function Intro() {
         <span className="font-bold">8 years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
-      </motion.p>
+      </motion.h1>
 
       {/* BUTTONS */}
       <motion.div className='flex flex-col gap-5 items-center justify-center sm:flex-row text-lg font-medium'
@@ -65,23 +65,26 @@ export default function Intro() {
          }}
       >
         <Link href='#contact'
-          className='bg-gray-950 flex items-center gap-2 text-white py-3 px-7 rounded-full'
+          className='group bg-gray-950 flex items-center gap-2 text-white py-3 px-7 rounded-full focus:scale-110 hover:scale-110  hover:bg-gray-950 active:scale-105 transition'
         >
           Contact me here
-          <BsArrowRight />
+          <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
         </Link>
-        <a href=""
-          className='bg-white flex items-center gap-2 py-3 px-7 rounded-full'
+        <a href="/CV.pdf"
+          download
+          className='group bg-white flex items-center gap-2 py-3 px-7 rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition border border-black/10'
         >
-          Download CV <HiDownload />
+          Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition'/>
         </a>
-        <a href=""
-          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full'
+        <a href="https://linkedin.com" 
+          target='_blank'
+          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10'
         >
           <BsLinkedin />
         </a>
-        <a href=""
-          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full'
+        <a href="https://linkedin.com" 
+          target='_blank'
+          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10'
         >
           <BsGithub />
         </a>
