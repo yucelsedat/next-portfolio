@@ -6,10 +6,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
+import { useSectionInView } from '@/lib/hooks'
 
 export default function Intro() {
+
+  const { ref } = useSectionInView('Home', 0.75)
+  
   return (
-    <section className=''>
+    <section ref={ref} id='home' className='mb-28 sm:mb-0 scroll-mt-[100rem]'>
       <div>
         <div className='relative w-24 mx-auto'>
           <motion.div
