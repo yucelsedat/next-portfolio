@@ -13,7 +13,7 @@ export default function Intro() {
   const { ref } = useSectionInView('Home', 0.75)
   
   return (
-    <section ref={ref} id='home' className='mb-28 sm:mb-0 scroll-mt-[100rem]'>
+    <section ref={ref} id='home' className='max-w-[50rem] mb-28 sm:mb-0 scroll-mt-[100rem]'>
       <div>
         <div className='relative w-24 mx-auto'>
           <motion.div

@@ -2,14 +2,18 @@ import About from "./components/about"
 import Intro from "./components/intro"
 import SectionDivider from "./components/section-divider"
 import Projects from "./components/projects"
+import Skills from "./components/skills"
+import Experience from "./components/experience"
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4 max-w-[50rem] !text-center mx-auto">
+    <main className="flex flex-col items-center px-4  !text-center mx-auto">
       <Intro />
       <SectionDivider />
       <About />
       <Projects />
+      <Skills />
+      <Experience />
     </main>
   )
 }
