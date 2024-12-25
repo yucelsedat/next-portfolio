@@ -33,7 +33,7 @@ export default function Skills() {
         {
           skillsData.map((skill, index) => (
             <motion.li key={index}
-              className='bg-white px-5 py-2 border border-black/[.1] rounded-xl'
+              className='bg-white px-5 py-2 borderBlack rounded-xl'
               variants={fadeInAnimationVariants}
               initial="initial"
               whileInView={'animate'}

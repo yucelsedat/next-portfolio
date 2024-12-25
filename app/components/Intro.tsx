@@ -7,8 +7,11 @@ import Link from 'next/link'
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { useSectionInView } from '@/lib/hooks'
+import { useActiveSectionContext } from '@/context/active-section-context'
 
 export default function Intro() {
+
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
   const { ref } = useSectionInView('Home', 0.75)
   
@@ -70,25 +73,29 @@ export default function Intro() {
       >
         <Link href='#contact'
           className='group bg-gray-950 flex items-center gap-2 text-white py-3 px-7 rounded-full focus:scale-110 hover:scale-110  hover:bg-gray-950 active:scale-105 transition'
+          onClick={() => {
+            setActiveSection('Contact')
+            setTimeOfLastClick(Date.now())
+          }}
         >
           Contact me here
           <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
         </Link>
         <a href="/CV.pdf"
           download
-          className='group bg-white flex items-center gap-2 py-3 px-7 rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition border border-black/10'
+          className='group bg-white flex items-center gap-2 py-3 px-7 rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack'
         >
           Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition'/>
         </a>
         <a href="https://linkedin.com" 
           target='_blank'
-          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10'
+          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack'
         >
           <BsLinkedin />
         </a>
         <a href="https://linkedin.com" 
           target='_blank'
-          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10'
+          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack'
         >
           <BsGithub />
         </a>
