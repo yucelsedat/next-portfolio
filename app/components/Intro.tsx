@@ -83,19 +83,19 @@ export default function Intro() {
         </Link>
         <a href="/CV.pdf"
           download
-          className='group bg-white flex items-center gap-2 py-3 px-7 rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack'
+          className='group bg-white flex items-center gap-2 py-3 px-7 rounded-full focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack dark:bg-white/10 '
         >
-          Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition'/>
+          Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 dark:group-hover:opacity-90  transition '/>
         </a>
         <a href="https://linkedin.com" 
           target='_blank'
-          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack'
+          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60'
         >
           <BsLinkedin />
         </a>
         <a href="https://linkedin.com" 
           target='_blank'
-          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack'
+          className='bg-white flex items-center gap-2 p-4 text-gray-700 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60'
         >
           <BsGithub />
         </a>
